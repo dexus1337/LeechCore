@@ -35,7 +35,7 @@
 #define DEVICE_FPGA_FT601_LIBRARY          "FTD3XX.dll"
 #define DEVICE_FPGA_DRIVER_LIBRARY         "leechcore_driver.dll"
 #else
-#define DEVICE_FPGA_FT601_LIBRARY          "leechcore_ft601_driver_linux.so"
+#define DEVICE_FPGA_FT601_LIBRARY          "libftd3xx.so"
 #define DEVICE_FPGA_DRIVER_LIBRARY         "leechcore_driver.so"
 #endif /* _WIN32 */
 

@@ -40,15 +40,18 @@ Please find a summary of the supported software based memory acquisition methods
 ### Hardware based memory aqusition methods:
 
 Please find a summary of the supported hardware based memory acquisition methods listed below. All hardware based memory acquisition methods are supported on both Windows and Linux.
-| Device                                                                         | Type | Interface | Speed | 64-bit memory access | PCIe TLP access | Project<br>Sponsor |
-| -------------------------------------------------------------------------------| ---- | --------- | ----- | -------------------- | --------------- | ------------------ |
-| [Screamer PCIe Squirrel](https://github.com/ufrisk/pcileech-fpga/tree/master/PCIeSquirrel) | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA) | USB-C | 190MB/s  | Yes | Yes | 💖 |
-| [ZDMA](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/ZDMA)              | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)   | Thunderbolt3 | 1000MB/s | Yes | Yes | 💖 |
-| [LeetDMA](https://github.com/ufrisk/pcileech-fpga)                                | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
-| [AC701/FT601](https://github.com/ufrisk/pcileech-fpga/tree/master/ac701_ft601)    | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  | 190MB/s  | Yes | Yes |    |
-| USB3380-EVB                                                                       | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
-| PP3380                                                                            | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
-| DMA patched HP iLO                                                                | [BMC](https://github.com/ufrisk/LeechCore/wiki/Device_RawTCP)         | TCP   |  1MB/s   | Yes | No  |    |
+| Device                                                                                     | Type | Interface | Speed | 64-bit memory access | PCIe TLP access | Project<br>Sponsor |
+| -------------------------------------------------------------------------------------------| ---- | --------- | ----- | -------------------- | --------------- | ------------------ |
+| [Screamer PCIe Squirrel](https://github.com/ufrisk/pcileech-fpga/tree/master/PCIeSquirrel) | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
+| [ZDMA](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/ZDMA)                       | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)   | Thunderbolt3 | 1000MB/s | Yes | Yes | 💖 |
+| [LeetDMA](https://github.com/ufrisk/pcileech-fpga)                                         | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
+| [CaptainDMA M2](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/CaptainDMA)        | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
+| [CaptainDMA 4.1th](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/CaptainDMA)     | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
+| [CaptainDMA 75T](https://github.com/ufrisk/pcileech-fpga-dev/blob/master/CaptainDMA)       | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB-C | 190MB/s  | Yes | Yes | 💖 |
+| [AC701/FT601](https://github.com/ufrisk/pcileech-fpga/tree/master/ac701_ft601)             | [FPGA](https://github.com/ufrisk/LeechCore/wiki/Device_FPGA)          | USB3  | 190MB/s  | Yes | Yes |    |
+| USB3380-EVB                                                                                | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
+| PP3380                                                                                     | [USB3380](https://github.com/ufrisk/LeechCore/wiki/Device_USB3380)    | USB3  | 150MB/s  | No  | No  |    |
+| DMA patched HP iLO                                                                         | [BMC](https://github.com/ufrisk/LeechCore/wiki/Device_RawTCP)         | TCP   |  1MB/s   | Yes | No  |    |
 
 
 
@@ -66,8 +69,8 @@ The LeechAgent listens on the port `tcp/28473` - please ensure network connectiv
 
 For more information please check the [LeechCore wiki](https://github.com/ufrisk/LeechCore/wiki) and the [blog entry](http://blog.frizk.net/2019/04/LeechAgent.html) about remote live memory capture with the LeechAgent.
 
-The videos below shows the process of installing the LeechAgent to a remote computer, connecting to it with MemProcFS to analyze and dump the memory while also connecting to it in parallel with PCILecch to submit a Python memory analysis script that make use of the MemProcFS API to analyze the remote CPU page tables for rwx-sections. Click on the video to open a higher-quality version on Youtube.
-<p align="center"><a href="https://www.youtube.com/watch?v=UIsNWJ5KTvQ" alt="Installing the LeechAgent, Dumping remote memory and running remote Python analysis scripts." target="_new"><img src="https://raw.githubusercontent.com/wiki/ufrisk/LeechCore/resources/agent-anim.gif"/></a>&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=Mij6LY1z4SY" alt="Demo: Remote memory analysis with MemProcFS and PCILeech" target="_new"><img src="http://img.youtube.com/vi/Mij6LY1z4SY/0.jpg" height="285"/></a></p>
+The videos below shows the process of installing the LeechAgent to a remote computer, connecting to it with MemProcFS to analyze and dump the memory while also connecting to it in parallel with PCILecch to submit a Python memory analysis script that make use of the MemProcFS API to analyze the remote CPU page tables for rwx-sections.
+<p align="center"><img src="https://raw.githubusercontent.com/wiki/ufrisk/LeechCore/resources/agent-anim.gif"/></p>
 
 **Examples:**
 
@@ -243,6 +246,11 @@ v1.0-1.8
 [v2.18](https://github.com/ufrisk/LeechCore/releases/tag/v2.18)
 * Bug fixes.
 * Hibernation file support.
+
+[v2.19](https://github.com/ufrisk/LeechCore/releases/tag/v2.19)
+* Bug fixes.
+* Windows 11 24H2 hibernation file support.
+* ZDMA fast-write "lockless" support.
 
 Latest:
 * Bug fixes.
